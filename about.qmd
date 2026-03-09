@@ -5,26 +5,35 @@ sidebar: false
 
 # Education
 
--   B.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+-   B.S., Industrial Engineering, Hacettepe University, Turkey, 2021 - 2026
 
 # Work Experience
+1.Worked as a kitchen assistant in Maine , U.S. with Work and Travel Program
 
 ## Employements
 
-1.  Firm xxx, position xx, year xxx
-
-2.  Firm yyy, position yyy, year yyy
+1.  None
 
 ## Internships
 
-1.  Firm aaa, position xx, year xxx
+1.  Teleperformance , HR Payroll Intern , 2023
 
-2.  Firm bbb, position yyy, year yyy
+2.  ASSAN, Quality Control Intern , 2025
+
+3.  TOFAŞ, Long Term Intern , 2026
 
 # Projects
 
+1.Optimization of Production Scheduling in Industrial 
+Kİtchen Equipment Project for EMU405 Final Project
+
+2.Akbank Vaka Maratonu 
 # Competencies
 
 R, Quarto, Git, Python
 
 # Hobbies
+
+1.Basketball
+
+2.Reading a book
