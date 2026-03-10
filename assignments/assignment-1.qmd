@@ -4,12 +4,77 @@ title: "Assignment 1"
 
 # Assignment 1
 
-```{r}
-1 + 1
-```
 
 My first assignment has two parts.
+First part from the video on Youtube with Mustafa Baydogan about Veri Bilimi
 
-## (a)
+## (a)## Question 1 (Open-ended)
 
-## (b)
+Mustafa Baydoğan’a göre machine learning alanını ilgi çekici yapan nokta nedir? Bu konuyla ilgili videoda verdiği örneği açıklayınız.
+
+**Answer**
+
+Mustafa Baydoğan’ın machine learning konusunda dikkat çekici bulduğu nokta, geçmişte tek tek çözülen problemler yerine geçmiş verilerin bir veri seti olarak kullanılıp daha sistematik sonuçlar elde edilebilmesidir. Videoda buna örnek olarak Amazon’un Amerika’daki bir şehirde bazı günler 100, bazı günler 70, bazı günler ise 50 dağıtım yapmasını vermektedir. Burada her gün için ayrı ayrı optimizasyon yapmak yerine, geçmiş dağıtım verileri anlamlı bir veri seti olarak değerlendirilip geleceğe yönelik kararlar desteklenebilmektedir.
+
+## Question 2 (Multiple Choice)
+
+Aşağıdakilerden hangisi Mustafa Baydoğan’ın bahsettiği geleneksel öğrenmenin derin öğrenme ve karar verme süreçlerinden değildir?
+
+A) Dirençli / Gürbüz (Robust) olabilme  
+B) Yönlendirebilme  
+C) Karara Çevirebilme  
+D) Planlı İlerleme  
+E) Yorumlanabilirlik  
+
+**Correct Answer:** D) Planlı İlerleme 
+
+## (b)library(dslabs)
+
+data("polls_us_election_2016")
+
+my_first <- "Arda"
+my_birth_year <- 2002
+
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8
+
+k
+
+if (k %% 2 == 0) {
+  head(polls_us_election_2016, k)
+} else {
+  tail(polls_us_election_2016, k)
+}
+
+total_na <- sum(is.na(polls_us_election_2016))
+total_na
+
+na_per_column <- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)
+
+head(na_per_column, 8)
+
+new_data <- polls_us_election_2016
+
+numeric_cols <- sapply(new_data, is.numeric)
+
+new_data[numeric_cols] <- lapply(new_data[numeric_cols], function(x){
+  x[is.na(x)] <- my_birth_year + k
+  x
+})
+
+char_factor_cols <- sapply(new_data, function(x) is.character(x) || is.factor(x))
+
+new_data[char_factor_cols] <- lapply(new_data[char_factor_cols], function(x){
+  x <- as.character(x)
+  x[is.na(x)] <- paste0(my_first, "_", k)
+  x
+})
+
+if (k %% 2 == 0) {
+  head(new_data, k)
+} else {
+  tail(new_data, k)
+}
+
+sum(is.na(new_data))
+
+anyNA(new_data)

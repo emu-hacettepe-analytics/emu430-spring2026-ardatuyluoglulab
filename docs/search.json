@@ -26,5 +26,79 @@
     "title": "Welcome to My Analytics Lab",
     "section": "",
     "text": "Hello! My name is Arda Tuyluoglu\nThis is my personal webpage.\nPlease stay tuned to follow my works on data analytics, blog posts, and more.\nThis is our template.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "This page is under construction.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "assignments/assignment-1.html",
+    "href": "assignments/assignment-1.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "My first assignment has two parts. First part from the video on Youtube with Mustafa Baydogan about Veri Bilimi\n\n\nMustafa Baydoğan’a göre machine learning alanını ilgi çekici yapan nokta nedir? Bu konuyla ilgili videoda verdiği örneği açıklayınız.\nAnswer\nMustafa Baydoğan’ın machine learning konusunda dikkat çekici bulduğu nokta, geçmişte tek tek çözülen problemler yerine geçmiş verilerin bir veri seti olarak kullanılıp daha sistematik sonuçlar elde edilebilmesidir. Videoda buna örnek olarak Amazon’un Amerika’daki bir şehirde bazı günler 100, bazı günler 70, bazı günler ise 50 dağıtım yapmasını vermektedir. Burada her gün için ayrı ayrı optimizasyon yapmak yerine, geçmiş dağıtım verileri anlamlı bir veri seti olarak değerlendirilip geleceğe yönelik kararlar desteklenebilmektedir.\n\n\n\nAşağıdakilerden hangisi Mustafa Baydoğan’ın bahsettiği geleneksel öğrenmenin derin öğrenme ve karar verme süreçlerinden değildir?\n\nDirençli / Gürbüz (Robust) olabilme\n\nYönlendirebilme\n\nKarara Çevirebilme\n\nPlanlı İlerleme\n\nYorumlanabilirlik\n\nCorrect Answer: D) Planlı İlerleme\n\n\n\ndata(“polls_us_election_2016”)\nmy_first &lt;- “Arda” my_birth_year &lt;- 2002\nk &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8\nk\nif (k %% 2 == 0) { head(polls_us_election_2016, k) } else { tail(polls_us_election_2016, k) }\ntotal_na &lt;- sum(is.na(polls_us_election_2016)) total_na\nna_per_column &lt;- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)\nhead(na_per_column, 8)\nnew_data &lt;- polls_us_election_2016\nnumeric_cols &lt;- sapply(new_data, is.numeric)\nnew_data[numeric_cols] &lt;- lapply(new_data[numeric_cols], function(x){ x[is.na(x)] &lt;- my_birth_year + k x })\nchar_factor_cols &lt;- sapply(new_data, function(x) is.character(x) || is.factor(x))\nnew_data[char_factor_cols] &lt;- lapply(new_data[char_factor_cols], function(x){ x &lt;- as.character(x) x[is.na(x)] &lt;- paste0(my_first, “_“, k) x })\nif (k %% 2 == 0) { head(new_data, k) } else { tail(new_data, k) }\nsum(is.na(new_data))\nanyNA(new_data)",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#blibrarydslabs",
+    "href": "assignments/assignment-1.html#blibrarydslabs",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "data(“polls_us_election_2016”)\nmy_first &lt;- “Arda” my_birth_year &lt;- 2002\nk &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8\nk\nif (k %% 2 == 0) { head(polls_us_election_2016, k) } else { tail(polls_us_election_2016, k) }\ntotal_na &lt;- sum(is.na(polls_us_election_2016)) total_na\nna_per_column &lt;- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)\nhead(na_per_column, 8)\nnew_data &lt;- polls_us_election_2016\nnumeric_cols &lt;- sapply(new_data, is.numeric)\nnew_data[numeric_cols] &lt;- lapply(new_data[numeric_cols], function(x){ x[is.na(x)] &lt;- my_birth_year + k x })\nchar_factor_cols &lt;- sapply(new_data, function(x) is.character(x) || is.factor(x))\nnew_data[char_factor_cols] &lt;- lapply(new_data[char_factor_cols], function(x){ x &lt;- as.character(x) x[is.na(x)] &lt;- paste0(my_first, “_“, k) x })\nif (k %% 2 == 0) { head(new_data, k) } else { tail(new_data, k) }\nsum(is.na(new_data))\nanyNA(new_data)",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Our Course Project",
+    "section": "",
+    "text": "I’m honored to be a member of the [group name] project team.\nBelow, you’ll find a brief summary of our project. To access a detailed project description, please go to https://[your-project-url].\nSummary\n[provide a biref summary of your project]\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "assignments/assignment-2.html",
+    "href": "assignments/assignment-2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Assignment 2\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "assignments.html",
+    "href": "assignments.html",
+    "title": "My Assignments",
+    "section": "",
+    "text": "On this page, I showcase the assignment I conducted for the [term and year, e.g. Spring 2026] EMU430 Data Analytics course.\nPlease use the left menu to navigate through my assignments.\nThe most recent update to this page was made on 10/03/2026.\nStay tuned for the rest :)\n\n\n\n Back to top",
+    "crumbs": [
+      "My Assignments"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#a-question-1-open-ended",
+    "href": "assignments/assignment-1.html#a-question-1-open-ended",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Mustafa Baydoğan’a göre machine learning alanını ilgi çekici yapan nokta nedir? Bu konuyla ilgili videoda verdiği örneği açıklayınız.\nAnswer\nMustafa Baydoğan’ın machine learning konusunda dikkat çekici bulduğu nokta, geçmişte tek tek çözülen problemler yerine geçmiş verilerin bir veri seti olarak kullanılıp daha sistematik sonuçlar elde edilebilmesidir. Videoda buna örnek olarak Amazon’un Amerika’daki bir şehirde bazı günler 100, bazı günler 70, bazı günler ise 50 dağıtım yapmasını vermektedir. Burada her gün için ayrı ayrı optimizasyon yapmak yerine, geçmiş dağıtım verileri anlamlı bir veri seti olarak değerlendirilip geleceğe yönelik kararlar desteklenebilmektedir.",
+    "crumbs": [
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "assignments/assignment-1.html#question-2-multiple-choice",
+    "href": "assignments/assignment-1.html#question-2-multiple-choice",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Aşağıdakilerden hangisi Mustafa Baydoğan’ın bahsettiği geleneksel öğrenmenin derin öğrenme ve karar verme süreçlerinden değildir?\n\nDirençli / Gürbüz (Robust) olabilme\n\nYönlendirebilme\n\nKarara Çevirebilme\n\nPlanlı İlerleme\n\nYorumlanabilirlik\n\nCorrect Answer: D) Planlı İlerleme",
+    "crumbs": [
+      "Assignment 1"
+    ]
   }
 ]

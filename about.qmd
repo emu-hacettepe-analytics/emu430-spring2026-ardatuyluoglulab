@@ -9,7 +9,7 @@ sidebar: false
 
 # Work Experience
 
-1.Worked as a kitchen assistant in Maine , U.S. with Work and Travel Program
+1.Worked as a kitchen assistant in Maine , U.S. with Work and Travel Program ,2024
 
 ## Employements
 
@@ -38,3 +38,9 @@ R, Quarto, Git, Python
 1.Basketball
 
 2.Reading a book
+
+# CV
+
+You can access my CV below:
+
+[Download my CV](CV_files/ardatuyluoglu_cv.pdf)
